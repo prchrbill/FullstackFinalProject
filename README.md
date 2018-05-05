@@ -1,52 +1,54 @@
-# Linux Server Deployment Project
+# Linux Server Deployment Project  #
 
-Public IP Address:18.219.106.242
-My catalog project address : http://ec2-18-219-106-242.us-east-2.compute.amazonaws.com/
+**Public IP Address**:18.219.106.242
+**My catalog project address** : http://ec2-18-219-106-242.us-east-2.compute.amazonaws.com/
   (you have to access it with this link)
   
-  Summary of Software Installed:
-  AWS Lightsail Instance
-  Ubuntu 
-  Python 2.7
-  Apache2
-  Flask
-  PostgreSQL
-  finger
-  mod_wsgi
-  Git
-  Oauth.client
-  MYSQL -(not used this project)
-  PHP7
+ ##  Summary of Software Installed: ##
+	- AWS Lightsail Instance
+	- Ubuntu 
+	- Python 2.7
+	- Apache2
+	- Flask
+	- PostgreSQL
+	- finger
+	- mod_wsgi
+	- Git
+	- Oauth.client
+	- MYSQL -(not used this project)
+	- PHP7
   
- Configurations:
- Created user grader with sudo rights via /etc/sudoers.d/grader
+ ## Configurations: ##
+ Created user grader with sudo rights via ***/etc/sudoers.d/grader***
   grader ALL=(ALL:ALL) ALL
-  SSH port changed to 2200 in /etc/ssh/sshd_config
+  SSH port changed to 2200 in ***/etc/ssh/sshd_config***
   Configured Firewall
-   sudo ufw allow 2200/tcp
-   sudo ufw allow 80/tcp
-   sudo ufw allow 123/udp
+	- sudo ufw allow 2200/tcp
+	- sudo ufw allow 80/tcp
+	- sudo ufw allow 123/udp
   
- Set local time to UTC
-    sudo dpkg-reconfigure tzdata
-    select none of the above
-    on next screen choose UTC
+##  Set local time to UTC ##
+	1. *sudo dpkg-reconfigure tzdata*
+	1. select none of the above
+	1. on next screen choose UTC
  
- Set up host file to run catalog application /etc/apache2/sites-available/mywebsite.conf
+##  Set up host file to run catalog application ##
+***/etc/apache2/sites-available/mywebsite.conf***
  
- Set up Database in postgreSQL
-    Created user 'catalog' with passord of 'catalog' with limited rights
-    Created user 'Spiderman' with password of 'freddy03' as a superuser
-    created database 'mylibrary.db' owned by 'Spiderman'
-    Spiderman is used in mylibrary.py and library_database_setup.py to do the database work
-    (he is your friendly neighborhood Spiderman)
+ ## Set up Database in postgreSQL ##
+	- Created user 'catalog' with passord of 'catalog' with limited rights
+	- Created user 'Spiderman' with password of 'freddy03' as a superuser
+	- created database 'mylibrary.db' owned by 'Spiderman'
+	- Spiderman is used in mylibrary.py and library_database_setup.py to do the database work
+	- (he is your friendly neighborhood Spiderman)
     
-  Git repository https://github.com/prchrbill/My-Library.git was cloned
-  to the folder ~/My-Library. From there it was edited and pushed
-  back to the repository. Files were then copied to /var/www/FlaskApps/mywebsite/
-  to be used by the webserver. 
+*	Git repository https://github.com/prchrbill/My-Library.git was cloned
+	to the folder ***~/My-Library***. From there it was edited and pushed
+	back to the repository. Files were then copied to ***/var/www/FlaskApps/mywebsite/***
+	to be used by the webserver. *
+
   
-List of sources used to help me:
+## List of sources used to help me: ##
   Udacity Forums so helpful with my Oauth problems.
   https://www.digitalocean.com/community/tutorials/how-to-install-linux-apache-mysql-php-lamp-stack-on-ubuntu-14-04
   https://howtoubuntu.org/how-to-cut-copy-and-paste-in-the-terminal-in-ubuntu
