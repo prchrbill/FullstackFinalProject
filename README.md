@@ -21,10 +21,12 @@
 	- PHP7
   
  ## Configurations: ##
- Created user grader with sudo rights via ***`/etc/sudoers.d/grader*`**
-  grader ALL=(ALL:ALL) ALL
-  SSH port changed to 2200 in ***`/etc/ssh/sshd_config`***
-  Configured Firewall
+- Created user grader with sudo rights via ***`/etc/sudoers.d/grader*`**
+- password for grader is **'grader'**
+- grader ALL=(ALL:ALL) ALL
+- SSH port changed to 2200 in ***`/etc/ssh/sshd_config`***
+
+##   Configured Firewall ##
 	- sudo ufw allow 2200/tcp
 	- sudo ufw allow 80/tcp
 	- sudo ufw allow 123/udp
