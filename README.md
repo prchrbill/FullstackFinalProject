@@ -35,6 +35,11 @@
 	1. *`sudo dpkg-reconfigure tzdata`*
 	1. select none of the above
 	1. on next screen choose UTC
+
+## Created WSGI file for webserver##
+
+	- Used FlaskApps.wsgi file as template
+	- Changed the sys.path to point to ***`/var/www/FlaskApps/mywebsite`***
  
 ##  Set up host file to run catalog application ##
 ***`/etc/apache2/sites-available/mywebsite.conf`***
